@@ -1,0 +1,147 @@
+body {
+    background: black;
+    color: black;
+    font-family: 'Anta', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+#encabezado {
+	top: 0px;
+	position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background: linear-gradient(90deg, rgba(39, 121, 9, 1), rgba(255, 255, 255, 1) 50%, rgba(254, 101, 5, 1));
+    height: 150px;
+    font-size: 20px;
+    width: 100%;
+}
+#toggleButton {
+    font-family: 'Anta', sans-serif;
+    border: 2px solid #000;
+    padding: 5px 10px;
+    position: relative; /* Establece la referencia para el posicionamiento absoluto de #linkContainer */
+    z-index: 1001; /* Asegura que el botón siempre esté sobre el contenedor de enlaces */
+}
+#linkContainer {
+    display: none;
+    background-color: white;
+    border: 2px solid #000;
+    border-radius: 5px;
+    position: absolute;
+    right: 0; /* Alinea el contenedor con el borde derecho del botón */
+    top: 100%; /* Posiciona el contenedor justo debajo del botón */
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    max-height: 200px;
+    overflow-y: auto;
+    width: auto; /* Ajusta el ancho automáticamente */
+}
+#linkContainer a {
+    display: block;
+    padding: 8px 12px;
+    text-decoration: none;
+    color: black;
+    border-bottom: 1px solid #000;
+    transition: background-color 0.3s;
+}
+#linkContainer a:last-child {
+    border-bottom: none; /* Elimina el borde inferior del último enlace */
+}
+#linkContainer a:hover {
+    background-color: #f0f0f0;
+}
+section {
+	margin-left: 100px;
+    margin-right: 25px;
+	margin-bottom: 25px;
+	margin-top: 25px;
+    border: 2px solid #ccc;
+    font-size: 20px;
+    text-align: justify;
+    padding: 16px;
+    background: linear-gradient(141deg, rgba(39, 121, 9, 1) 19%, rgba(254, 101, 5, 1) 53%, rgba(255, 255, 255, 1) 79%);
+}
+#seccion1{
+	margin-top: 160px;
+}
+#seccion2{
+	padding-bottom: 500px;
+}
+#fotprof{
+	display: inline;
+	height: 225px;
+	width: auto;
+}
+/* Estilos para las imágenes en la galería 1 */
+.gallery-container {
+    /* Estilos comunes para todos los contenedores de galería */
+    margin-bottom: 20px;
+}
+.gallery1 img {
+    /* Estilos específicos para la galería 1 */
+	top: 20px;
+	position: absolute;
+    max-width: 100px;
+    height: auto;
+    object-fit: contain;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+.galleryL img {
+    /* Estilos específicos para la galería L */
+	position: absolute;
+    max-width: 600px;
+    height: auto;
+    object-fit: contain;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+.gallery1 img.active, .galleryL img.active {
+    opacity: 1;
+    transform: scale(1);
+}
+.sidebarI {
+    position: fixed;
+    top: 0px;
+    left: 0;
+    width: 65px;
+    height: 1000px;
+    background-color: #333;
+    padding: 15px;
+    overflow-y: auto;
+}
+.listaredes {
+	margin-top: 65px;
+    width: 50px;
+    height: 50px;
+    display: block;
+}
+footer{
+	text-align: center;
+	width: 1325px;
+	background-color: azure;
+	}
+/* Estilo para el enlace de descarga */
+a.download-link {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px;
+    font-family: 'Anta', sans-serif;
+    font-size: 16px;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #000000;
+    border: 2px solid #000000;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+/* Estilo al pasar el mouse sobre el enlace */
+a.download-link:hover {
+    background-color: #ffffff;
+    color: #000000;
+}
+/* Estilo al hacer clic en el enlace */
+a.download-link:active {
+    transform: translateY(2px);
+}
